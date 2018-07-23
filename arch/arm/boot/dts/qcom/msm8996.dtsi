@@ -364,10 +364,10 @@
 			label = "cont_splash_mem_hdmi";
 		};
 
-		ramoops_mem: ramoops_region@92900000 {
+		ramoops_mem: ramoops_region@bfc00000 {
 			compatible = "removed-dma-pool";
 			no-map;
-			reg = <0x0 0x92900000 0x0 0x00100000>;
+			reg = <0x0 0xbfc00000 0x0 0x00100000>;
 		};
 	};
 };
@@ -4196,7 +4196,7 @@
 		compatible = "ramoops";
 		status = "ok";
 
-		android,ramoops-buffer-start = <0x92900000>;
+		android,ramoops-buffer-start = <0xbfc00000>;
 		android,ramoops-buffer-size = <0x00100000>;
 		android,ramoops-console-size = <0x00080000>;
 		android,ramoops-pmsg-size = <0x00040000>;
@@ -4371,3 +4371,4 @@
 #include "msm8996-pm.dtsi"
 #include "msm-arm-smmu-8996.dtsi"
 #include "msm8996-vidc.dtsi"
+#include "msm8996-vendor.dtsi"
